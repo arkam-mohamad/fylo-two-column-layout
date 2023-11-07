@@ -1,1 +1,255 @@
+*{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+.nav-links{
+  display: flex;
+  gap: 20px;
+}
+nav a{
+  text-decoration: none;
+  color: hsl(238, 22%, 44%);
+  font-weight: bold;
+}
 
+header{
+  padding: 50px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header .content, main .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 50px 0 0;
+}
+h1{
+  color: hsl(243, 87%, 12%);
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+}
+.news-letter{
+  display: flex;
+  gap: 20px;
+}
+.input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+input{
+  padding: 10px;
+  border: 1px solid red;
+  width: 350px;
+  border-radius: 5px;
+}
+.input small{
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  top:110%
+}
+button{
+  background-color: hsl(224, 93%, 58%);
+  color: hsl(240, 75%, 98%);
+  font-weight: bold;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+}
+button:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+header img{
+  max-width: 100%;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  background-image: url('./images/bg-curve-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+.more{
+  color: hsl(170, 45%, 43%);
+  border-bottom: 1px solid hsl(170, 45%, 43%);
+  max-width: fit-content;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.more:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+.review{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 60%;
+  border: 1px solid hsl(0, 0%, 75%);
+  border-radius: 10px;
+  padding: 30px;
+  background-color: white;
+  gap: 10px;
+}
+.profile{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.profile img{
+  height: 50px;
+  border-radius: 50%;
+}
+.main-img{
+  max-width: 100%;
+}
+
+aside{
+  background-color: hsl(238, 22%, 44%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+  color: hsl(0, 0%, 75%);
+}
+aside h1{
+  color: white;
+}
+aside .content{
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+aside .news-letter{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+aside .news-letter small{
+  color: hsl(0, 0%, 75%);
+}
+
+footer{
+  background-color: hsl(243, 87%, 12%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 20px;
+}
+footer .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+footer .content > div{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact p{
+  color: white;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+footer a{
+  color: white;
+  text-decoration: none;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+footer div.social{
+  flex-direction: row;
+}
+
+
+@media screen and (max-width:650px) {
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header img{
+    order: 1;
+  }
+  header .content{
+    order: 2;
+    text-align: center;
+    padding-right: 0;
+  }
+  .news-letter{
+    flex-direction: column;
+    align-items: center;
+  }
+  header button{
+    width: 95%;
+  }
+
+  main{
+    background-image: url('./images/bg-curve-mobile.svg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .content{
+    order: 2;
+    align-items: center;
+    padding-right: 0;
+  }
+  main h1{
+    text-align: center;
+  }
+  .main-img{
+    order: 1;
+  }
+
+  aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  aside .content{
+    text-align: center;
+    align-items: center;
+    padding-right: 0;
+  }
+  aside .news-letter{
+    align-items: center;
+  }
+  aside button{
+    width: 100%;
+  }
+
+  footer .content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  footer .social{
+    align-self: center;
+  }
+}
